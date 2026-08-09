@@ -4,12 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | FirstFive</title>
+    <title>Sign In | First Five</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
+    <main>
+        <div class="hero">
+            <div class="hero__logo">
+                <h1>First<span>Five</span></h1>
+                <p>Your Journey Starts Now.</p>
+            </div>
+            <div class="hero__details">
+                <h2>Log In</h2>
+                <p>Welcome back! Log in to <br>continue your 5K journey.</p>
+            </div>
+        </div>
+        <form action="" class="login-form">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" autocomplete="email" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" autocomplete="current-password" required>
+            <a href="#">Forgot password?</a>
+            <button type="submit">LOG IN</button>
+        </form>
+        <div class="login__breaker">
+            <span>OR</span>
+        </div>
+        <div class="social-login">
+            <button type="button">Continue with Apple</button>
+            <button type="button">Continue with Google</button>
+        </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="http://">Sign up</a></p>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 
