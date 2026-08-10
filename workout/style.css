@@ -1,5 +1,909 @@
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #020b12;
+  color: #f5f5f5;
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* =========================
+   WORKOUT
+========================= */
+
+.workout {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 24px 21px 20px;
+
+  background:
+    radial-gradient(circle at 50% 40%, rgba(12, 45, 48, 0.28), transparent 55%),
+    #020b12;
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.workout-header {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 230px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.workout-logo {
+  text-align: center;
+}
+
+.workout-logo h1 {
+  font-size: 43px;
+  line-height: 1;
+
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  color: #f5f5f5;
+}
+
+.workout-logo h1 span {
+  color: #b7df28;
+}
+
+.workout-logo p {
+  margin-top: 32px;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+.header-dot {
+  margin: 0 6px;
+
+  color: #b7df28;
+
+  font-size: 14px;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-button {
+  position: absolute;
+
+  top: 43px;
+  left: 10px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.close-button span {
+  position: absolute;
+
+  top: 18px;
+  left: 2px;
+
+  width: 38px;
+  height: 3px;
+
+  border-radius: 3px;
+
+  background: #f5f5f5;
+}
+
+.close-button span:first-child {
+  transform: rotate(45deg);
+}
+
+.close-button span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-button {
+  position: absolute;
+
+  top: 42px;
+  right: 10px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  background: transparent;
+  color: #f5f5f5;
+
+  font-size: 38px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* =========================
+   CURRENT ACTIVITY
+========================= */
+
+.current-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 275px;
+
+  padding: 0 27px 10px;
+}
+
+/* =========================
+   ACTIVITY DETAILS
+========================= */
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-label {
+  margin-bottom: 12px;
+
+  color: #b7df28;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.activity-details h2 {
+  font-size: 72px;
+  line-height: 0.95;
+
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.activity-description {
+  margin-top: 14px;
+
+  color: #aeb3bb;
+
+  font-size: 25px;
+}
+
+.activity-time {
+  margin-top: 18px;
+
+  color: #b7df28;
+
+  font-size: 91px;
+  line-height: 0.9;
+
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+
+.activity-total {
+  margin-top: 25px;
+
+  color: #adb2ba;
+
+  font-size: 25px;
+}
+
+.activity-total span {
+  margin-left: 10px;
+
+  color: #b7df28;
+
+  font-weight: 600;
+}
+
+/* =========================
+   TIMER
+========================= */
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 350px;
+  height: 350px;
+
+  margin-right: -110px;
+
+  flex-shrink: 0;
+}
+
+.timer-ring {
+  position: relative;
+
+  width: 235px;
+  height: 235px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from -8deg,
+    #b7df28 0deg,
+    #b7df28 140deg,
+    #17232e 140deg,
+    #17232e 360deg
+  );
+}
+
+.timer-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 11px;
+
+  border-radius: 50%;
+
+  background: #020b12;
+}
+
+.timer-content {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+.timer-content span {
+  color: #aeb3bb;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.timer-content strong {
+  margin-top: 12px;
+
+  color: #f5f5f5;
+
+  font-size: 45px;
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+/* =========================
+   WORKOUT PROFILE
+========================= */
+
+.workout-profile {
+  position: relative;
+
+  padding: 28px 16px 22px;
+
+  border: 1px solid #172630;
+  border-radius: 22px;
+
+  background: rgba(8, 20, 28, 0.72);
+
+  overflow: hidden;
+}
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+}
+
+.profile-header h2 {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.profile-legend {
+  display: flex;
+  gap: 18px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+}
+
+.legend-item i {
+  display: block;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 3px;
+}
+
+.legend-item.run i {
+  background: #b7df28;
+}
+
+.legend-item.walk i {
+  background: #ffc400;
+}
+
+/* =========================
+   INTERVALS
+========================= */
+
+.intervals {
+  display: grid;
+
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+
+  gap: 3px;
+
+  margin-top: 36px;
+}
+
+.interval {
+  min-width: 0;
+
+  text-align: center;
+}
+
+.interval-bar {
+  width: 100%;
+  height: 180px;
+
+  border-radius: 4px;
+}
+
+.interval.run .interval-bar {
+  background: #94c823;
+}
+
+.interval.walk .interval-bar {
+  background: #ffc20a;
+}
+
+.interval.cooldown .interval-bar {
+  background: #94c823;
+}
+
+.interval-time {
+  display: block;
+
+  margin-top: 17px;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.interval-name {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.interval.run .interval-name {
+  color: #b7df28;
+}
+
+.interval.walk .interval-name {
+  color: #ffc400;
+}
+
+.interval.cooldown .interval-name {
+  color: #f5f5f5;
+}
+
+/* =========================
+   INTERVAL MARKER
+========================= */
+
+.interval-marker {
+  position: absolute;
+
+  top: 97px;
+  left: 72px;
+
+  z-index: 5;
+}
+
+.interval-marker span {
+  display: block;
+
+  padding: 8px 10px;
+
+  border: 1px solid #39434a;
+  border-radius: 5px;
+
+  background: #090d10;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.interval-marker::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -20px;
+
+  width: 0;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #090d10;
+}
+
+/* =========================
+   INTERVAL PROGRESS
+========================= */
+
+.interval-progress {
+  margin-top: 38px;
+
+  text-align: center;
+}
+
+.interval-progress p {
+  color: #b5b9bf;
+
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.interval-progress strong {
+  color: #b7df28;
+
+  font-size: 19px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 12px;
+
+  margin-top: 17px;
+
+  border-radius: 10px;
+
+  background: #202c35;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #b7df28;
+}
+
+/* =========================
+   WORKOUT STATS
+========================= */
+
+.workout-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 25px;
+
+  padding: 24px 10px;
+
+  border: 1px solid #172630;
+  border-radius: 22px;
+
+  background: rgba(8, 20, 28, 0.72);
+}
+
+.stat {
+  position: relative;
+
+  text-align: center;
+}
+
+.stat:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  right: 0;
+
+  width: 1px;
+  height: 130px;
+
+  background: #1b2a34;
+}
+
+.stat-icon {
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b7df28;
+
+  font-size: 42px;
+}
+
+.walker-icon {
+  color: #ffc400;
+}
+
+.stat p {
+  margin-top: 8px;
+
+  color: #b8bcc2;
+
+  font-size: 15px;
+}
+
+.stat p span {
+  color: #ffc400;
+}
+
+.stat strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #f5f5f5;
+
+  font-size: 43px;
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.workout-controls {
+  display: grid;
+
+  grid-template-columns: 100px 1fr 100px;
+
+  align-items: start;
+
+  gap: 12px;
+
+  margin-top: 24px;
+
+  text-align: center;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 82px;
+  height: 82px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #17232e;
+
+  cursor: pointer;
+}
+
+.control p {
+  margin-top: 11px;
+
+  color: #b7bbc0;
+
+  font-size: 16px;
+}
+
+.pause-control p {
+  color: #b7df28;
+}
+
+/* =========================
+   PREVIOUS / NEXT ICONS
+========================= */
+
+.previous-icon,
+.next-icon {
+  position: relative;
+
+  display: block;
+
+  width: 35px;
+  height: 28px;
+}
+
+.previous-icon::before {
+  content: "";
+
+  position: absolute;
+
+  left: 8px;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 20px solid #fff;
+}
+
+.previous-icon::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 5px;
+  height: 28px;
+
+  border-radius: 2px;
+
+  background: #fff;
+}
+
+.next-icon::before {
+  content: "";
+
+  position: absolute;
+
+  right: 8px;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 20px solid #fff;
+}
+
+.next-icon::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 5px;
+  height: 28px;
+
+  border-radius: 2px;
+
+  background: #fff;
+}
+
+/* =========================
+   PAUSE BUTTON
+========================= */
+
+.pause-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 70px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: #b7df28;
+
+  cursor: pointer;
+}
+
+.pause-icon {
+  display: flex;
+
+  gap: 7px;
+}
+
+.pause-icon i {
+  display: block;
+
+  width: 7px;
+  height: 30px;
+
+  border-radius: 2px;
+
+  background: #061018;
+}
+
+/* =========================
+   HOVER STATES
+========================= */
+
+.control-button:hover {
+  background: #22313d;
+}
+
+.pause-button:hover {
+  background: #c4ea3b;
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+  .workout {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .workout-header {
+    height: 220px;
+  }
+
+  .workout-logo h1 {
+    font-size: 40px;
+  }
+
+  .workout-logo p {
+    font-size: 19px;
+  }
+
+  .current-activity {
+    padding-left: 27px;
+    padding-right: 0;
+  }
+
+  .activity-details h2 {
+    font-size: 67px;
+  }
+
+  .activity-description {
+    font-size: 23px;
+  }
+
+  .activity-time {
+    font-size: 82px;
+  }
+
+  .timer {
+    width: 300px;
+    height: 300px;
+
+    margin-right: -120px;
+  }
+
+  .timer-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .timer-content strong {
+    font-size: 41px;
+  }
+
+  .workout-profile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .profile-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .profile-header h2 {
+    font-size: 17px;
+  }
+
+  .profile-legend {
+    gap: 10px;
+  }
+
+  .legend-item {
+    font-size: 14px;
+  }
+
+  .interval-bar {
+    height: 165px;
+  }
+
+  .interval-time {
+    font-size: 14px;
+  }
+
+  .interval-name {
+    font-size: 14px;
+  }
+
+  .stat strong {
+    font-size: 37px;
+  }
+
+  .stat p {
+    font-size: 13px;
+  }
+
+  .workout-controls {
+    grid-template-columns: 82px 1fr 82px;
+  }
+
+  .control-button {
+    width: 74px;
+    height: 74px;
+  }
 }
