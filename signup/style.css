@@ -488,7 +488,7 @@ main {
   }
 
   .signup-header {
-    height: 90px;
+    height: 70px;
   }
 
   .back-button {
@@ -501,7 +501,7 @@ main {
   }
 
   .signup-intro {
-    margin-top: 25px;
+    margin-top: 5px;
   }
 
   .signup-intro h2 {
@@ -517,7 +517,7 @@ main {
   }
 
   .form-group {
-    margin-bottom: 27px;
+    margin-bottom: 20px;
   }
 
   .form-group label {
