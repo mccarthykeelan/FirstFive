@@ -3,14 +3,401 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Workout | FirstFive</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <main class="workout">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="workout-header">
+
+            <button type="button" class="close-button" aria-label="Exit workout">
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="workout-logo">
+                <h1>First<span>Five</span></h1>
+
+                <p>
+                    WEEK 2
+                    <span class="header-dot">●</span>
+                    DAY 1
+                </p>
+            </div>
+
+            <button type="button" class="music-button" aria-label="Music settings">
+                ♪
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             CURRENT ACTIVITY
+        ========================== -->
+
+        <section class="current-activity">
+
+            <div class="activity-details">
+
+                <p class="activity-label">
+                    CURRENT ACTIVITY
+                </p>
+
+                <h2>RUN</h2>
+
+                <p class="activity-description">
+                    Steady pace
+                </p>
+
+                <div class="activity-time">
+                    0:58
+                </div>
+
+                <p class="activity-total">
+                    OF
+                    <span>5:00</span>
+                </p>
+
+            </div>
+
+
+            <!-- Timer -->
+
+            <div class="timer">
+
+                <div class="timer-ring">
+
+                    <div class="timer-content">
+
+                        <span>
+                            TIME LEFT
+                        </span>
+
+                        <strong>
+                            19:58
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORKOUT PROFILE
+        ========================== -->
+
+        <section class="workout-profile">
+
+            <div class="profile-header">
+
+                <h2>
+                    WORKOUT PROFILE
+                </h2>
+
+                <div class="profile-legend">
+
+                    <span class="legend-item run">
+                        <i></i>
+                        Run
+                    </span>
+
+                    <span class="legend-item walk">
+                        <i></i>
+                        Walk
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Intervals -->
+
+            <div class="intervals">
+
+                <div class="interval run">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        5:00
+                    </span>
+
+                    <span class="interval-name">
+                        RUN
+                    </span>
+                </div>
+
+
+                <div class="interval walk">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        1:30
+                    </span>
+
+                    <span class="interval-name">
+                        WALK
+                    </span>
+                </div>
+
+
+                <div class="interval run">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        5:00
+                    </span>
+
+                    <span class="interval-name">
+                        RUN
+                    </span>
+                </div>
+
+
+                <div class="interval walk">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        1:30
+                    </span>
+
+                    <span class="interval-name">
+                        WALK
+                    </span>
+                </div>
+
+
+                <div class="interval run">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        5:00
+                    </span>
+
+                    <span class="interval-name">
+                        RUN
+                    </span>
+                </div>
+
+
+                <div class="interval walk">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        1:30
+                    </span>
+
+                    <span class="interval-name">
+                        WALK
+                    </span>
+                </div>
+
+
+                <div class="interval run">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        5:00
+                    </span>
+
+                    <span class="interval-name">
+                        RUN
+                    </span>
+                </div>
+
+
+                <div class="interval walk">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        1:30
+                    </span>
+
+                    <span class="interval-name">
+                        WALK
+                    </span>
+                </div>
+
+
+                <div class="interval cooldown">
+                    <div class="interval-bar"></div>
+
+                    <span class="interval-time">
+                        5:00
+                    </span>
+
+                    <span class="interval-name">
+                        COOL<br>
+                        DOWN
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Current Position -->
+
+            <div class="interval-marker">
+                <span>5:02</span>
+            </div>
+
+
+            <!-- Progress -->
+
+            <div class="interval-progress">
+
+                <p>
+                    <strong>1</strong>
+                    /
+                    9 INTERVALS COMPLETED
+                </p>
+
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 11%;"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORKOUT STATISTICS
+        ========================== -->
+
+        <section class="workout-stats">
+
+            <!-- Since Start -->
+
+            <div class="stat">
+
+                <div class="stat-icon stopwatch-icon">
+                    ⏱
+                </div>
+
+                <p>
+                    SINCE START
+                </p>
+
+                <strong>
+                    5:02
+                </strong>
+
+            </div>
+
+
+            <!-- Next -->
+
+            <div class="stat">
+
+                <div class="stat-icon walker-icon">
+                    🏃
+                </div>
+
+                <p>
+                    NEXT
+                    <span>WALK</span>
+                </p>
+
+                <strong>
+                    1:30
+                </strong>
+
+            </div>
+
+
+            <!-- Time Left -->
+
+            <div class="stat">
+
+                <div class="stat-icon clock-icon">
+                    ◷
+                </div>
+
+                <p>
+                    TIME LEFT
+                </p>
+
+                <strong>
+                    19:58
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WORKOUT CONTROLS
+        ========================== -->
+
+        <section class="workout-controls">
+
+            <!-- Previous -->
+
+            <div class="control">
+
+                <button type="button" class="control-button previous" aria-label="Previous interval">
+                    <span class="previous-icon"></span>
+                </button>
+
+                <p>PREV</p>
+
+            </div>
+
+
+            <!-- Pause -->
+
+            <div class="control pause-control">
+
+                <button type="button" class="pause-button" aria-label="Pause workout">
+                    <span class="pause-icon">
+                        <i></i>
+                        <i></i>
+                    </span>
+                </button>
+
+                <p>PAUSE</p>
+
+            </div>
+
+
+            <!-- Next -->
+
+            <div class="control">
+
+                <button type="button" class="control-button next" aria-label="Next interval">
+                    <span class="next-icon"></span>
+                </button>
+
+                <p>NEXT</p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
