@@ -49,8 +49,8 @@ main {
     100% auto;
 
   background-position:
-    top center,
-    top center;
+    center,
+    center -300px;
 
   background-repeat: no-repeat, no-repeat;
 
@@ -62,7 +62,7 @@ main {
 ========================= */
 
 .hero {
-  min-height: 455px;
+  min-height: 340px;
 
   display: flex;
   flex-direction: column;
@@ -133,6 +133,7 @@ main {
 .login-form {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .login-form label {
@@ -331,11 +332,11 @@ main {
 
     background-position:
       top center,
-      center -200px;
+      center -150px;
   }
 
   .hero {
-    min-height: 455px;
+    min-height: 320px;
   }
 
   .hero__logo {
@@ -400,7 +401,7 @@ main {
   }
 
   .hero {
-    min-height: 370px;
+    min-height: 350px;
   }
 
   .hero__logo {
