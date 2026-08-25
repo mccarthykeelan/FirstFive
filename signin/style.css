@@ -42,7 +42,7 @@ main {
       rgba(2, 12, 20, 0.88) 70%,
       #020b12 100%
     ),
-    url("images/runner.png");
+    url("../images/runner.png");
 
   background-size:
     100% auto,
