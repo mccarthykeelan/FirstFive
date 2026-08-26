@@ -21,6 +21,16 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------------- APP CONTAINER ---------------- */
+
+.app {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--background);
+}
+
 /* ---------------- HEADER ---------------- */
 
 .header {
