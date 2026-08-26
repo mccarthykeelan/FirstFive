@@ -295,7 +295,7 @@ body {
 
 .workout-profile {
   position: relative;
-
+  margin-bottom: 16px;
   padding: 28px 16px 22px;
 
   border: 1px solid #172630;
